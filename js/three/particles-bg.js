@@ -61,7 +61,7 @@ export class ParticlesBackground {
     }
 
     createParticles() {
-        const geometry = new this.THREE.SphereGeometry(2, 8, 8);
+        this.particleGeometry = new this.THREE.SphereGeometry(2, 8, 8);
 
         for (let i = 0; i < this.particleCount; i++) {
             // Gradient color from purple to blue
@@ -70,7 +70,7 @@ export class ParticlesBackground {
             color.setHex(this.interpolateColor(0xa78bfa, 0x60a5fa, t));
 
             const material = new this.THREE.MeshBasicMaterial({ color });
-            const particle = new this.THREE.Mesh(geometry, material);
+            const particle = new this.THREE.Mesh(this.particleGeometry, material);
 
             // Random position
             particle.position.x = (Math.random() - 0.5) * 1000;
@@ -256,10 +256,15 @@ export class ParticlesBackground {
             window.removeEventListener('resize', this.resizeListener);
         }
 
+        // Only dispose materials (each unique), not geometry
         this.particles.forEach(particle => {
-            particle.geometry.dispose();
             particle.material.dispose();
         });
+
+        // Dispose shared geometry once
+        if (this.particleGeometry) {
+            this.particleGeometry.dispose();
+        }
 
         if (this.lines) {
             this.lines.geometry.dispose();
