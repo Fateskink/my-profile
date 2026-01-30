@@ -27,6 +27,15 @@ async function loadComponents() {
 
     // After all components loaded, initialize
     initializeApp();
+
+    // Initialize Three.js lazy loader
+    import('./three/lazy-loader.js')
+        .then(({ initLazyLoader }) => {
+            initLazyLoader();
+        })
+        .catch(error => {
+            console.error('Failed to initialize Three.js lazy loader:', error);
+        });
 }
 
 // Initialize app after components loaded
