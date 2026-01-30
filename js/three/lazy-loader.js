@@ -8,6 +8,9 @@ export class ThreeLazyLoader {
         };
         this.THREE = null;
         this.observers = [];
+        this.particlesBg = null;      // Store instance reference for cleanup
+        this.techShowcase = null;      // Store instance reference for cleanup
+        this.loadThreeCorePromise = null;  // Prevent concurrent Three.js imports
     }
 
     async init() {
@@ -60,15 +63,25 @@ export class ThreeLazyLoader {
     async loadThreeCore() {
         if (this.loaded.threeCore) return;
 
-        try {
-            const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-            this.THREE = THREE;
-            this.loaded.threeCore = true;
-            console.log('Three.js core loaded');
-        } catch (error) {
-            console.error('Failed to load Three.js:', error);
-            throw error;
+        // Return existing promise if already loading
+        if (this.loadThreeCorePromise) {
+            return this.loadThreeCorePromise;
         }
+
+        this.loadThreeCorePromise = (async () => {
+            try {
+                const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+                this.THREE = THREE;
+                this.loaded.threeCore = true;
+                console.log('Three.js core loaded');
+            } catch (error) {
+                console.error('Failed to load Three.js:', error);
+                this.loadThreeCorePromise = null;  // Reset on error to allow retry
+                throw error;
+            }
+        })();
+
+        return this.loadThreeCorePromise;
     }
 
     async loadParticlesBackground() {
@@ -78,8 +91,8 @@ export class ThreeLazyLoader {
 
             // Import and initialize particles
             const { ParticlesBackground } = await import('./particles-bg.js');
-            const particles = new ParticlesBackground('#home', this.THREE);
-            particles.init();
+            this.particlesBg = new ParticlesBackground('#home', this.THREE);
+            this.particlesBg.init();
 
             this.loaded.particlesBg = true;
             console.log('Particles background loaded');
@@ -95,8 +108,8 @@ export class ThreeLazyLoader {
 
             // Import and initialize tech showcase
             const { TechShowcase } = await import('./tech-showcase.js');
-            const showcase = new TechShowcase('tech-showcase-canvas', this.THREE);
-            showcase.init();
+            this.techShowcase = new TechShowcase('tech-showcase-canvas', this.THREE);
+            this.techShowcase.init();
 
             this.loaded.techShowcase = true;
             console.log('Tech showcase loaded');
@@ -108,6 +121,14 @@ export class ThreeLazyLoader {
     destroy() {
         this.observers.forEach(observer => observer.disconnect());
         this.observers = [];
+
+        // Clean up Three.js components
+        if (this.particlesBg) {
+            this.particlesBg.destroy();
+        }
+        if (this.techShowcase) {
+            this.techShowcase.destroy();
+        }
     }
 }
 
