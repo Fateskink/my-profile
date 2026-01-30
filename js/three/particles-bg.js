@@ -171,6 +171,12 @@ export class ParticlesBackground {
             }
         }
 
+        // Dispose old attributes before replacing
+        const oldPos = this.lines.geometry.getAttribute('position');
+        const oldColor = this.lines.geometry.getAttribute('color');
+        if (oldPos) oldPos.dispose();
+        if (oldColor) oldColor.dispose();
+
         this.lines.geometry.setAttribute('position', new this.THREE.Float32BufferAttribute(positions, 3));
         this.lines.geometry.setAttribute('color', new this.THREE.Float32BufferAttribute(colors, 4));
     }
@@ -197,6 +203,13 @@ export class ParticlesBackground {
 
         const time = Date.now() * 0.001;
 
+        // Calculate mouse position once per frame (not per particle)
+        let mousePosition = null;
+        if (this.mouse.moved) {
+            this.raycaster.setFromCamera(this.mouse, this.camera);
+            mousePosition = this.raycaster.ray.origin.clone();
+        }
+
         // Update particle positions
         this.particles.forEach((particle, i) => {
             const original = particle.userData.originalPosition;
@@ -209,15 +222,15 @@ export class ParticlesBackground {
             particle.position.y = original.y + Math.cos(time * speed + offset) * amplitude;
 
             // Mouse repulsion
-            if (this.mouse.moved) {
-                this.raycaster.setFromCamera(this.mouse, this.camera);
-                const mousePosition = this.raycaster.ray.origin.clone();
-                mousePosition.z = particle.position.z;
+            if (mousePosition) {
+                // Use pre-calculated mousePosition
+                const mousePosAtParticleZ = mousePosition.clone();
+                mousePosAtParticleZ.z = particle.position.z;
 
-                const distance = particle.position.distanceTo(mousePosition);
+                const distance = particle.position.distanceTo(mousePosAtParticleZ);
 
                 if (distance < 200) {
-                    const direction = particle.position.clone().sub(mousePosition).normalize();
+                    const direction = particle.position.clone().sub(mousePosAtParticleZ).normalize();
                     const repulsion = direction.multiplyScalar((200 - distance) * 0.5);
                     particle.position.add(repulsion);
                 }
