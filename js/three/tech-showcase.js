@@ -95,14 +95,19 @@ export class TechShowcase {
   setupVisibilityObserver() {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          this.isVisible = entry.isIntersecting;
-        });
+        this.isVisible = entries[0].isIntersecting;
+        if (this.isVisible && !this.animationId) {
+          this.animate();
+        } else if (!this.isVisible && this.animationId) {
+          cancelAnimationFrame(this.animationId);
+          this.animationId = null;
+        }
       },
       { threshold: 0.1 }
     );
 
     observer.observe(this.canvas);
+    this.visibilityObserver = observer;
   }
 
   /**
