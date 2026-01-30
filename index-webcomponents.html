@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Component-based HTML - Clean như React/Vue -->
-    <!-- Mỗi div có id, JavaScript sẽ render nội dung vào đây -->
+    <!-- Web Components - Clean như React/Vue -->
+    <navbar-component></navbar-component>
+    <hero-section></hero-section>
+    <skills-section></skills-section>
+    <projects-section></projects-section>
+    <contact-section></contact-section>
+    <footer-component></footer-component>
 
-    <div id="navbar-root"></div>
-    <div id="hero-root"></div>
-    <div id="skills-root"></div>
-    <div id="projects-root"></div>
-    <div id="contact-root"></div>
-    <div id="footer-root"></div>
-
-    <!-- Bundled JavaScript - Giống như Create React App build output -->
-    <script src="main.js"></script>
+    <!-- Load components bundle -->
+    <script src="web-components-bundle.js"></script>
 </body>
 </html>
