@@ -12,60 +12,51 @@ Professional portfolio website showcasing skills, projects, and experience as a 
 
 ```
 profile/
-├── assets/              # Static assets
-│   ├── avatar.jpg      # Profile picture
-│   ├── turtle.png      # Mascot/favicon
+├── index.html              # Entry point (26 lines)
+├── components/             # HTML components
+│   ├── navbar.html         # Navigation bar
+│   ├── hero.html           # Hero section
+│   ├── skills.html         # Skills section
+│   ├── projects.html       # Projects section
+│   ├── contact.html        # Contact section
+│   └── footer.html         # Footer with turtle mascot
+├── js/
+│   └── app.js              # Component loader & app logic
+├── css/
+│   └── styles.css          # Custom styles
+├── assets/                 # Static assets
+│   ├── avatar.jpg          # Profile picture
+│   ├── turtle.png          # Mascot/favicon
 │   └── Nguyen-Trong-Thang-2026.pdf  # CV
-├── css/                # Styles
-│   └── styles.css      # Custom CSS styles
-├── js/                 # JavaScript modules
-│   ├── components/     # UI Components
-│   │   ├── navbar.js       # Navigation bar
-│   │   ├── hero.js         # Hero section
-│   │   ├── skills.js       # Skills section
-│   │   ├── skillIcons.js   # Skill icon helpers
-│   │   ├── projects.js     # Projects section
-│   │   ├── contact.js      # Contact section
-│   │   └── footer.js       # Footer
-│   ├── data.js         # Profile data (centralized)
-│   └── app.js          # Main app initialization
-├── index.html          # Entry point
-├── profile.md          # Profile content (Markdown)
-└── README.md           # This file
+├── profile.md              # Profile content (Markdown)
+└── README.md               # This file
 ```
 
 ---
 
 ## 🏗️ Architecture
 
-### Component-Based Structure
+### Component-Based Structure (Fetch Pattern)
 
-The website is built using **ES6 modules** with a component-based architecture:
+**Pattern giống PHP includes nhưng dùng JavaScript fetch:**
 
-1. **Data Layer** (`js/data.js`)
-   - Centralized data source
-   - Easy to update information
-   - Single source of truth
+```javascript
+// Giống: <?php include 'header.php'; ?>
+await fetch('components/navbar.html');
+```
 
-2. **Component Layer** (`js/components/`)
-   - Modular, reusable components
-   - Each component is self-contained
-   - Easy to maintain and extend
+**Workflow:**
+1. Browser loads `index.html` (26 dòng - clean HTML với div placeholders)
+2. `js/app.js` fetch tất cả components từ `components/`
+3. Insert HTML vào đúng vị trí
+4. Initialize interactions (scroll, animations, navbar)
 
-3. **App Layer** (`js/app.js`)
-   - Initializes all components
-   - Handles dynamic values (age, experience)
-   - Sets up interactions (scroll, animations)
-
-### Key Features
-
-- ✅ **Component-based** - Easy to maintain and extend
-- ✅ **ES6 Modules** - Modern JavaScript
-- ✅ **Centralized Data** - Update once, reflect everywhere
-- ✅ **Responsive Design** - Works on all devices
-- ✅ **Dynamic Content** - Auto-calculates age and experience
-- ✅ **Smooth Animations** - Scroll-triggered animations
-- ✅ **Performance** - Fast loading with optimized assets
+**Advantages:**
+- ✅ Component-based - Mỗi section 1 file riêng
+- ✅ Easy to maintain - Edit component chỉ cần sửa 1 file
+- ✅ Syntax highlighting - Full HTML syntax support
+- ✅ No build tool - Vanilla JS, works everywhere
+- ✅ Pattern familiar - Giống PHP/SSI includes
 
 ---
 
@@ -73,91 +64,28 @@ The website is built using **ES6 modules** with a component-based architecture:
 
 ### Update Personal Information
 
-Edit `js/data.js`:
+Edit respective component files in `components/`:
+- `navbar.html` - Name, navigation links
+- `hero.html` - Profile info, bio, location
+- `contact.html` - Email, location, GitHub
 
+**Dynamic values (age, experience) auto-calculate from:**
 ```javascript
-export const profileData = {
-    name: {
-        display: 'Nguyen Trong Thang',    // Display name (no diacritics)
-        full: 'Nguyễn Trọng Thăng',       // Full Vietnamese name
-        english: 'Shayne Nguyen'           // English name
-    },
-    birthYear: 1997,                       // Birth year (auto-calculates age)
-    workStartYear: 2022,                   // Work start year (auto-calculates experience)
-    contact: {
-        email: 'shaynenguyen9@gmail.com',
-        location: 'Hanoi, Vietnam',
-        github: 'https://github.com/Fateskink',
-        githubUsername: '@Fateskink'
-    },
-    // ... more data
-};
+const birthYear = 1997;        // in js/app.js
+const workStartYear = 2022;
 ```
 
 ### Add New Skills
 
-In `js/data.js`, add to the `skills` object:
-
-```javascript
-skills: {
-    backend: [
-        { name: 'New Tech', icon: 'techname/COLOR', title: 'Full Name' },
-        // ...
-    ]
-}
-```
+Edit `components/skills.html` - Add skill badges with icons.
 
 ### Add New Projects
 
-In `js/data.js`, add to the `projects` array:
+Edit `components/projects.html` - Add project cards.
 
-```javascript
-projects: [
-    {
-        date: '01/2026',
-        title: 'Project Name',
-        description: 'Project description...',
-        tech: ['Tech1', 'Tech2', 'Tech3'],
-        link: 'https://project-url.com',
-        icon: 'trending'  // Options: trending, shield, book, building, briefcase, cart
-    },
-    // ...
-]
-```
+### Modify Styles
 
-### Modify a Component
-
-Edit the respective component file in `js/components/`:
-
-- `navbar.js` - Navigation bar
-- `hero.js` - Hero section
-- `skills.js` - Skills section
-- `projects.js` - Projects section
-- `contact.js` - Contact section
-- `footer.js` - Footer and turtle mascot
-
----
-
-## 🎨 Styling
-
-### Tailwind CSS
-
-The website uses Tailwind CSS CDN for styling. Most styles are utility classes applied directly in components.
-
-### Custom CSS
-
-Custom styles are in `css/styles.css`:
-- Animations
-- Gradients
-- Hover effects
-- Responsive utilities
-
-### Color Scheme
-
-- **Primary Gradient**: Purple (#667EEA) to Blue (#764BA2)
-- **Background**: Dark (#0A0E27)
-- **Text**: Light gray (#E2E8F0)
-- **Accents**: Purple/Blue variations
+Edit `css/styles.css` for custom animations and effects.
 
 ---
 
@@ -169,30 +97,29 @@ Custom styles are in `css/styles.css`:
 vercel --prod
 ```
 
+**Custom Domain:**
+- Vào: https://vercel.com/[your-project]/settings/domains
+- Add domain: `thangnt.vercel.app`
+
 ### Other Platforms
 
-The website is a static site and can be deployed to:
-- **Netlify**: Drag & drop the folder
+Static site - works on:
+- **Netlify**: Drag & drop
 - **GitHub Pages**: Push to gh-pages branch
-- **Cloudflare Pages**: Connect repository
-- **Any static host**: Upload all files
+- **Cloudflare Pages**: Connect repo
+- **Any static host**: Upload files
 
 ---
 
-## 📝 Content Management
+## 🛠️ Tech Stack
 
-### profile.md
-
-The `profile.md` file contains detailed profile information in Markdown format:
-- Professional summary
-- Technical skills
-- Project descriptions
-- Expertise areas
-
-This file serves as:
-- ✅ Documentation
-- ✅ CV alternative
-- ✅ Easy reference for data.js updates
+- **HTML5** - Semantic markup
+- **CSS3** - Custom animations
+- **Tailwind CSS** - Utility-first CSS (CDN)
+- **JavaScript (Vanilla)** - Fetch API for component loading
+- **Google Fonts** - Inter & JetBrains Mono
+- **Simple Icons** - Technology logos
+- **Vercel** - Hosting & deployment
 
 ---
 
@@ -200,59 +127,22 @@ This file serves as:
 
 ### Auto-Calculated Values
 
-The website automatically calculates:
-
-1. **Age**: `Current Year - Birth Year (1997)`
-2. **Experience**: `Current Year - Work Start Year (2022)`
-
-Updated displays:
-- Hero section badge
-- Contact section footer
+- **Age**: Auto-calculates from `birthYear: 1997`
+- **Experience**: Auto-calculates from `workStartYear: 2022`
 
 ### Scroll Animations
 
-Elements with `.animate-on-scroll` class fade in when scrolled into view.
+Elements fade in when scrolled into view using Intersection Observer API.
 
 ### Navbar Auto-Hide
 
-Navbar hides when scrolling down and shows when scrolling up (after 100px scroll).
-
----
-
-## 🛠️ Tech Stack
-
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styles + animations
-- **Tailwind CSS** - Utility-first CSS
-- **JavaScript ES6+** - Modern JavaScript modules
-- **Google Fonts** - Inter & JetBrains Mono
-- **Simple Icons** - Technology logos
-- **Vercel** - Hosting & deployment
-
----
-
-## 📦 Assets
-
-### Icons
-
-Technology icons are loaded from:
-- **CDN**: `https://cdn.simpleicons.org/`
-- **Custom SVG**: Defined in `js/components/skillIcons.js`
-
-### Images
-
-- `avatar.jpg` - Profile picture
-- `turtle.png` - Mascot & favicon
-
-### Documents
-
-- `Nguyen-Trong-Thang-2026.pdf` - CV (downloadable)
+Navbar hides when scrolling down, shows when scrolling up.
 
 ---
 
 ## 🐢 Easter Egg
 
-Click the floating turtle in the bottom-right corner to visit the GitHub profile!
+Click the floating turtle in the bottom-right corner to visit GitHub profile!
 
 ---
 
@@ -265,7 +155,7 @@ Click the floating turtle in the bottom-right corner to visit the GitHub profile
 ## 🔗 Links
 
 - **Live Site**: [https://thangnt.vercel.app](https://thangnt.vercel.app)
-- **GitHub**: [https://github.com/Fateskink](https://github.com/Fateskink)
+- **GitHub**: [https://github.com/Fateskink/my-profile](https://github.com/Fateskink/my-profile)
 - **Email**: [shaynenguyen9@gmail.com](mailto:shaynenguyen9@gmail.com)
 
 ---
