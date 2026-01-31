@@ -104,6 +104,18 @@ function initializeApp() {
 
         lastScroll = currentScroll;
     });
+
+    // Initialize projects carousel after components are loaded
+    if (typeof window.initProjectsCarousel === 'function') {
+        window.initProjectsCarousel();
+    } else {
+        // If function not available yet, wait a bit and try again
+        setTimeout(() => {
+            if (typeof window.initProjectsCarousel === 'function') {
+                window.initProjectsCarousel();
+            }
+        }, 100);
+    }
 }
 
 // Start loading components when DOM is ready

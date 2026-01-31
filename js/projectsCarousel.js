@@ -1,13 +1,23 @@
 // Projects Carousel Configuration
 // Initialize Swiper carousel for projects section
 
-document.addEventListener('DOMContentLoaded', function() {
+// Function to initialize the carousel
+function initProjectsCarousel() {
   // Check if Swiper is loaded
   if (typeof Swiper === 'undefined') {
     console.error('Swiper library not loaded. Falling back to static grid.');
     fallbackToGrid();
     return;
   }
+
+  // Check if carousel container exists
+  const carouselContainer = document.querySelector('.projectsSwiper');
+  if (!carouselContainer) {
+    console.warn('Projects carousel container not found. Waiting for components to load...');
+    return;
+  }
+
+  console.log('Initializing projects carousel...');
 
   // Initialize Swiper carousel
   const projectsSwiper = new Swiper('.projectsSwiper', {
@@ -68,6 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
     mousewheel: {
       forceToAxis: true,
     },
+
+    // Callbacks
+    on: {
+      init: function() {
+        console.log('Swiper initialized successfully!');
+      }
+    }
   });
 
   // Pause autoplay when hovering over any project card
@@ -91,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     projectsSwiper.params.speed = 0;
     projectsSwiper.autoplay.stop();
   }
-});
+}
 
 // Fallback function if Swiper fails to load
 function fallbackToGrid() {
@@ -124,4 +141,9 @@ function fallbackToGrid() {
 
     console.log('Fallback to grid layout applied successfully.');
   }
+}
+
+// Export for use by app.js
+if (typeof window !== 'undefined') {
+  window.initProjectsCarousel = initProjectsCarousel;
 }
