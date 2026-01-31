@@ -183,7 +183,7 @@ section {
     border-radius: 50%;
     color: rgb(192, 132, 252) !important;
     transition: all 0.3s ease;
-    top: 50%;
+    top: calc(50% + 30px);
     transform: translateY(-50%);
     margin-top: 0;
 }
