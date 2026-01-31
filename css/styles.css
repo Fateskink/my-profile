@@ -183,8 +183,8 @@ section {
     border-radius: 50%;
     color: rgb(192, 132, 252) !important;
     transition: all 0.3s ease;
-    top: calc(50% + 30px);
-    transform: translateY(-50%);
+    top: 50%;
+    transform: translateY(calc(-50% - 60px));
     margin-top: 0;
 }
 
@@ -198,13 +198,13 @@ section {
 .swiper-button-next:hover {
     background: rgba(168, 85, 247, 0.2);
     border-color: rgba(168, 85, 247, 0.5);
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(calc(-50% - 60px)) scale(1.1);
     box-shadow: 0 8px 16px rgba(168, 85, 247, 0.3);
 }
 
 .swiper-button-prev:active,
 .swiper-button-next:active {
-    transform: translateY(-50%) scale(0.95);
+    transform: translateY(calc(-50% - 60px)) scale(0.95);
 }
 
 /* Responsive arrow positioning */
