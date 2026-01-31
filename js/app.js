@@ -16,7 +16,7 @@ async function loadComponents() {
     await Promise.all(
         components.map(async ({ id, file }) => {
             try {
-                const response = await fetch(file);
+                const response = await fetch(file + '?v=' + Date.now());
                 const html = await response.text();
                 document.getElementById(id).innerHTML = html;
             } catch (error) {

@@ -3,44 +3,27 @@ export class ThreeLazyLoader {
     constructor() {
         this.loaded = {
             threeCore: false,
-            particlesBg: false,
-            techShowcase: false
+            globalParticles: false,
+            skillsParticles: false
         };
         this.THREE = null;
         this.observers = [];
-        this.particlesBg = null;      // Store instance reference for cleanup
-        this.techShowcase = null;      // Store instance reference for cleanup
+        this.globalParticles = null;   // Store instance reference for cleanup
+        this.skillsParticles = null;   // Store instance reference for cleanup
         this.loadThreeCorePromise = null;  // Prevent concurrent Three.js imports
     }
 
     async init() {
-        this.setupHeroObserver();
-        this.setupSkillsObserver();
-    }
-
-    setupHeroObserver() {
-        const heroSection = document.querySelector('#home');
-        if (!heroSection) {
-            console.warn('Hero section not found');
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            async (entries) => {
-                if (entries[0].isIntersecting && !this.loaded.particlesBg) {
-                    await this.loadParticlesBackground();
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.2 }
-        );
-
-        observer.observe(heroSection);
-        this.observers.push(observer);
+        console.log('ThreeLazyLoader initializing...');
+        // Load global particles immediately
+        await this.loadGlobalParticles();
+        // Setup observer for skills section (optional, can be disabled)
+        // this.setupSkillsObserver();
     }
 
     setupSkillsObserver() {
         const skillsSection = document.querySelector('#skills');
+        console.log('Setting up skills observer, found section:', skillsSection);
         if (!skillsSection) {
             console.warn('Skills section not found');
             return;
@@ -48,12 +31,13 @@ export class ThreeLazyLoader {
 
         const observer = new IntersectionObserver(
             async (entries) => {
-                if (entries[0].isIntersecting && !this.loaded.techShowcase) {
-                    await this.loadTechShowcase();
+                console.log('Skills section intersection:', entries[0].isIntersecting);
+                if (entries[0].isIntersecting && !this.loaded.skillsParticles) {
+                    await this.loadSkillsParticles();
                     observer.disconnect();
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 }
         );
 
         observer.observe(skillsSection);
@@ -84,37 +68,37 @@ export class ThreeLazyLoader {
         return this.loadThreeCorePromise;
     }
 
-    async loadParticlesBackground() {
+    async loadGlobalParticles() {
         try {
             // Load Three.js core first
             await this.loadThreeCore();
 
-            // Import and initialize particles
-            const { ParticlesBackground } = await import('./particles-bg.js');
-            this.particlesBg = new ParticlesBackground('#home', this.THREE);
-            this.particlesBg.init();
+            // Import and initialize global particles
+            const { GlobalParticles } = await import('./global-particles.js?v=' + Date.now());
+            this.globalParticles = new GlobalParticles(this.THREE);
+            this.globalParticles.init();
 
-            this.loaded.particlesBg = true;
-            console.log('Particles background loaded');
+            this.loaded.globalParticles = true;
+            console.log('Global particles background loaded');
         } catch (error) {
-            console.error('Failed to load particles background:', error);
+            console.error('Failed to load global particles background:', error);
         }
     }
 
-    async loadTechShowcase() {
+    async loadSkillsParticles() {
         try {
             // Ensure Three.js is loaded
             await this.loadThreeCore();
 
-            // Import and initialize tech showcase
-            const { TechShowcase } = await import('./tech-showcase.js');
-            this.techShowcase = new TechShowcase('tech-showcase-canvas', this.THREE);
-            this.techShowcase.init();
+            // Import and initialize skills particles
+            const { SkillsParticles } = await import('./skills-particles.js?v=' + Date.now());
+            this.skillsParticles = new SkillsParticles('#skills', this.THREE);
+            this.skillsParticles.init();
 
-            this.loaded.techShowcase = true;
-            console.log('Tech showcase loaded');
+            this.loaded.skillsParticles = true;
+            console.log('Skills particles loaded');
         } catch (error) {
-            console.error('Failed to load tech showcase:', error);
+            console.error('Failed to load skills particles:', error);
         }
     }
 
@@ -123,11 +107,11 @@ export class ThreeLazyLoader {
         this.observers = [];
 
         // Clean up Three.js components
-        if (this.particlesBg) {
-            this.particlesBg.destroy();
+        if (this.globalParticles) {
+            this.globalParticles.destroy();
         }
-        if (this.techShowcase) {
-            this.techShowcase.destroy();
+        if (this.skillsParticles) {
+            this.skillsParticles.destroy();
         }
     }
 }
