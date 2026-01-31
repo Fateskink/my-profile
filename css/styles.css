@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: #0A0E27;
     color: #E2E8F0;
+    position: relative;
+}
+
+/* Prevent horizontal scroll on all sections */
+section {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .font-mono {
@@ -206,11 +218,32 @@ body {
     }
 
     .swiper-button-prev {
-        left: 16px;
+        left: 8px;
     }
 
     .swiper-button-next {
-        right: 16px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 14px;
+    }
+
+    .swiper-button-prev {
+        left: 4px;
+    }
+
+    .swiper-button-next {
+        right: 4px;
     }
 }
 
@@ -292,6 +325,17 @@ body {
 
     .swiper-wrapper {
         width: 100%;
+    }
+
+    .projectsSwiper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Ensure project cards don't exceed viewport */
+    .project-card {
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 
