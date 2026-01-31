@@ -140,11 +140,23 @@ body {
     position: relative;
     padding: 0 60px 60px;
     overflow: visible !important;
+    width: 100%;
+    max-width: 100%;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .projectsSwiper {
         padding: 0 0 60px;
+        overflow: hidden !important;
+    }
+
+    /* Force proper width on mobile */
+    #projects {
+        overflow-x: hidden;
+    }
+
+    #projects .max-w-6xl {
+        padding: 0 1rem;
     }
 }
 
@@ -267,6 +279,20 @@ body {
 .swiper-slide {
     height: auto;
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make sure slides don't shrink on mobile */
+@media (max-width: 767px) {
+    .swiper-slide {
+        flex-shrink: 0;
+        width: 100% !important;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+    }
 }
 
 /* Smooth transitions */
