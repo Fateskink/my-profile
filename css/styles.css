@@ -130,3 +130,185 @@ body {
         right: 10px;
     }
 }
+
+/* ========================================
+   Swiper Carousel Custom Styles
+   ======================================== */
+
+/* Swiper Container */
+.projectsSwiper {
+    position: relative;
+    padding: 0 60px 60px;
+    overflow: visible !important;
+}
+
+@media (max-width: 1023px) {
+    .projectsSwiper {
+        padding: 0 0 60px;
+    }
+}
+
+/* Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 50%;
+    color: rgb(192, 132, 252) !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: rgba(168, 85, 247, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(168, 85, 247, 0.3);
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+    transform: scale(0.95);
+}
+
+/* Responsive arrow positioning */
+@media (max-width: 1023px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 16px;
+    }
+
+    .swiper-button-prev {
+        left: 16px;
+    }
+
+    .swiper-button-next {
+        right: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-button-prev {
+        left: -24px;
+    }
+
+    .swiper-button-next {
+        right: -24px;
+    }
+}
+
+/* Disabled state */
+.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 32px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(71, 85, 105, 0.5);
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet:hover {
+    background: rgba(168, 85, 247, 0.6);
+    transform: scale(1.2);
+}
+
+.swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, rgb(168, 85, 247), rgb(236, 72, 153));
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.5);
+}
+
+/* Dynamic bullets (when too many slides) */
+.swiper-pagination-bullet-active-main {
+    background: linear-gradient(135deg, rgb(168, 85, 247), rgb(236, 72, 153));
+}
+
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+    background: rgba(168, 85, 247, 0.5);
+}
+
+/* Project card in carousel */
+.swiper-slide .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure consistent card height */
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* Smooth transitions */
+.swiper-wrapper {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .swiper {
+        --swiper-transition-duration: 0ms !important;
+    }
+
+    .swiper-wrapper {
+        transition-duration: 0ms !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination-bullet {
+        transition: none !important;
+    }
+
+    .project-card {
+        transition: none !important;
+    }
+}
+
+/* Loading state (optional skeleton) */
+.swiper-lazy-preloader {
+    border-color: rgba(168, 85, 247, 0.4) transparent rgba(168, 85, 247, 0.4) transparent;
+}
+
+/* Focus states for accessibility */
+.swiper-button-prev:focus-visible,
+.swiper-button-next:focus-visible {
+    outline: 2px solid rgb(168, 85, 247);
+    outline-offset: 4px;
+}
+
+.swiper-pagination-bullet:focus-visible {
+    outline: 2px solid rgb(168, 85, 247);
+    outline-offset: 2px;
+    border-radius: 50%;
+}
