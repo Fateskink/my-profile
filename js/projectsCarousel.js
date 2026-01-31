@@ -1,6 +1,12 @@
 // Projects Carousel Configuration
 // Initialize Swiper carousel for projects section
 
+// Listen for initialization event from app.js
+document.addEventListener('initCarousel', function() {
+  console.log('Carousel init event received');
+  initProjectsCarousel();
+});
+
 // Function to initialize the carousel
 function initProjectsCarousel() {
   // Check if Swiper is loaded
@@ -13,7 +19,7 @@ function initProjectsCarousel() {
   // Check if carousel container exists
   const carouselContainer = document.querySelector('.projectsSwiper');
   if (!carouselContainer) {
-    console.warn('Projects carousel container not found. Waiting for components to load...');
+    console.error('Projects carousel container not found.');
     return;
   }
 
@@ -141,9 +147,4 @@ function fallbackToGrid() {
 
     console.log('Fallback to grid layout applied successfully.');
   }
-}
-
-// Export for use by app.js
-if (typeof window !== 'undefined') {
-  window.initProjectsCarousel = initProjectsCarousel;
 }
