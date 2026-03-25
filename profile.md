@@ -19,9 +19,9 @@ Full Stack Developer with 4+ years of experience building scalable web and mobil
 ## 🛠️ Technical Skills
 
 ### Backend
-- **Languages**: Ruby, Golang, Python, PHP
-- **Frameworks**: Ruby on Rails, Gin, Laravel
-- **APIs**: GraphQL, gRPC, RESTful
+- **Languages**: Ruby, Golang, Python, PHP, C#, MQL5
+- **Frameworks**: Ruby on Rails, Gin, Fiber, FastAPI, Laravel
+- **APIs**: GraphQL, gRPC, RESTful, WebSocket
 
 ### Frontend
 - **Frameworks**: Vue.js 2/3, React, Next.js
@@ -33,28 +33,64 @@ Full Stack Developer with 4+ years of experience building scalable web and mobil
 - **State Management**: GetX
 
 ### DevOps & Cloud
-- **Platforms**: AWS (Lambda, DynamoDB)
+- **Platforms**: AWS (Lambda, DynamoDB), GCP
 - **Containers**: Docker, Kubernetes (K8s)
-- **Tools**: Helm Chart, K9s, Airflow, RackSpace
+- **Tools**: Helm Chart, K9s, Airflow, RackSpace, Linux
 
 ### Database
 - **SQL**: PostgreSQL, MySQL
-- **NoSQL**: Redis, DynamoDB, ClickHouse
+- **NoSQL**: MongoDB, Redis, DynamoDB, ClickHouse
 
-### AI & Automation
+### AI & Data
 - **LLM Integration**: OpenAI, Claude Code
-- **Frameworks**: LangGraph, LangSmith
-- **Scraping**: Python Scrapy, Playwright
+- **Frameworks**: LangGraph, Pydantic, Celery
+- **Data Science**: NumPy, Pandas, Apache Spark
+- **Scraping**: Python Scrapy, Playwright, Selenium
 
 ### Other Technologies
 - **Protocols**: MQTT
 - **Trading**: MetaTrader MQL5
 - **Payments**: VNPay
-- **APIs**: Zoom API, Slack API, GitHub API
+- **APIs**: Zoom API, Slack API, GitHub API, LINE LIFF
+- **Tools**: Git, GitHub, Linear, VS Code, Claude Code, Make
 
 ---
 
 ## 🚀 Featured Projects
+
+### Mei-wa (December 2025)
+**Social welfare management platform**
+
+A social welfare management platform designed to support elderly and disabled individuals within the community efficiently and transparently.
+
+**Tech Stack**:
+- Backend: Ruby on Rails
+- Frontend: React
+
+---
+
+### Bottos (December 2025)
+**LINE LIFF co-working cafe app**
+
+A LINE LIFF-powered web app that lets customers book seats, check in, and access co-working cafe services directly within LINE chat.
+
+**Tech Stack**:
+- Backend: Golang
+- Frontend: Vue.js
+- Integration: LINE LIFF
+
+---
+
+### Smart Invoice (September 2025)
+**Electronic invoicing platform**
+
+An electronic invoicing management platform that enables businesses to create, store, and track invoices online quickly, accurately, and in compliance with regulations.
+
+**Tech Stack**:
+- Backend: Ruby on Rails
+- Frontend: React
+
+---
 
 ### AI FinanceHub (June 2025)
 **Intelligent trading automation platform**
@@ -62,8 +98,9 @@ Full Stack Developer with 4+ years of experience building scalable web and mobil
 Unifies symbol mapping across brokers, streamlining trading workflow with AI-powered automation.
 
 **Tech Stack**:
-- Backend: Golang (RESTful), Python
+- Backend: Python (Pydantic, Celery, Scrapy, Selenium, Playwright, NumPy, Pandas)
 - Frontend: React, Next.js
+- Data: Apache Airflow, Apache Spark
 - Trading: MetaTrader Expert Advisor (MQL5)
 
 ---
@@ -179,10 +216,9 @@ Modern e-commerce solution built with cutting-edge technologies.
 Server-side remake for company internal project management system.
 - **Tech**: Golang (GraphQL API)
 
-### Wave1-Expert (May 2023)
-Fire suppression system management and evaluation platform (remake).
-- **Tech**: Ruby on Rails (GraphQL API), Vue.js 3, TypeScript
-- **Features**: Asynchronous data migration from legacy system
+### Tence (May 2023 - February 2026)
+High performance data processing system designed for fire protection management.
+- **Tech**: Ruby on Rails, Vue.js
 
 ### EcoCrawler (December 2023 - April 2024)
 Trading data crawler for domestic and foreign news sites.
@@ -208,4 +244,4 @@ E-commerce website built with pure PHP.
 
 ---
 
-*Last updated: January 2026*
+*Last updated: March 2026*
