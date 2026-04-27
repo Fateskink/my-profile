@@ -17,7 +17,7 @@ pip install -r requirements.txt
 python generate.py
 
 # Custom input/output
-python generate.py --input data/cv_data.json --output output/my-cv.pdf
+python generate.py --input data/cv_data.json --output ../assets/Nguyen-Trong-Thang-2026.pdf
 
 # HTML preview (debug layout in browser)
 python generate.py --html-only
