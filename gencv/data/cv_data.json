@@ -1,0 +1,171 @@
+{
+  "name": "Nguyen Trong Thang",
+  "title": "Backend | Frontend Developer",
+  "contact": {
+    "phone": "0358045997",
+    "email": "shaynenguyen9@gmail.com",
+    "website": "https://thangnt.vercel.app",
+    "location": "Hanoi, Vietnam"
+  },
+  "objective": "Long term goal: Fullstack developer",
+  "education": [
+    {
+      "school": "Aptech Vietnam",
+      "degree": "ADSE (Aptech Certified Computer Professional)",
+      "start": "2022",
+      "end": "2024"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Behemoth co.ltd",
+      "role": "Backend & Frontend Developer",
+      "techstack": null,
+      "start": "8/2022",
+      "end": "Now",
+      "description": "I wear multiple hats as a developer, driving impact across both backend and frontend architectures.",
+      "highlights": "<ul><li>Contributed to <strong>large-scale projects</strong> across different domains</li><li>Designed and implemented <strong>backend APIs</strong> handling millions of data records daily</li><li>Collaborated with <strong>cross-functional teams</strong> to ship features end-to-end</li></ul>"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Language",
+      "content": "Ruby, Golang, PHP, Python, MQL5, Typescript, Javascript, SQL, C#"
+    },
+    {
+      "category": "Data & Streaming",
+      "content": "PostgreSql, MySql, MongoDB, Redis, ClickHouse, DynamoDB, Apache Airflow, MQTT, Apache Spark"
+    },
+    {
+      "category": "Framework",
+      "content": "Ruby on Rails, Gin, Fiber, FastAPI, Vuejs, Flutter, React, NextJs, Tailwind CSS, Pydantic, Celery, Scrapy, Selenium, Playwright, NumPy, Pandas, gRPC, GraphQL, WebSocket"
+    },
+    {
+      "category": "Infrastructure",
+      "content": "Docker, Kubernetes, RackSpace, Helm Chart, Linux, GCP, AWS"
+    },
+    {
+      "category": "Tool & Workflow",
+      "content": "Git, GitHub, Linear, VS Code, Claude Code, Make"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Mei-wa",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, React",
+      "start": "12/2025",
+      "end": "Now",
+      "highlights": "Developed <strong>REST APIs</strong> and user interface",
+      "description": "A social welfare management platform designed to support elderly and disabled individuals within the community efficiently and transparently."
+    },
+    {
+      "name": "Bottos",
+      "role": "BE & FE Developer",
+      "techstack": "Golang, Vue.js, LINE",
+      "start": "12/2025",
+      "end": "Now",
+      "highlights": "Built <strong>REST APIs</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
+      "description": "A LINE LIFF-powered web app that lets customers book seats, check in, and access co-working café services directly within LINE chat."
+    },
+    {
+      "name": "Smart Invoice",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, React",
+      "highlights": "Deployed <strong>GraphQL API</strong> system and implemented CSV data import job logic.",
+      "start": "09/2025",
+      "end": "Now",
+      "description": "An electronic invoicing management platform that enables businesses to create, store, and track invoices online quickly, accurately, and in compliance with regulations."
+    },
+    {
+      "name": "AI FinanceHub",
+      "role": "BE & FE Developer",
+      "techstack": "Kubernetes, Pydantic, Celery, NumPy, Pandas, React, Next.js, Apache Airflow, Apache Spark",
+      "start": "06/2025",
+      "end": "Now",
+      "highlights": "Built <strong>APIs</strong> and UI, developed data management system, and implemented <strong>backfill/backtest</strong> pipelines for trading strategies.",
+      "description": "Intelligent trading tool that unifies symbol mapping across brokers, streamlining trading workflow with AI-powered automation."
+    },
+    {
+      "name": "Yobimori",
+      "role": "Fullstack Developer",
+      "techstack": "AWS, Golang, React, Flutter, IoT Protocol",
+      "start": "07/2025",
+      "end": "Now",
+      "highlights": "Maintained and extended <strong>microservices</strong> architecture, developed APIs, mobile app, and managed deployments with <strong>AWS</strong> monitoring.",
+      "description": "A mutual aid service that protects precious lives and families from marine accidents."
+    },
+    {
+      "name": "Vibico System",
+      "role": "BE & FE Developer",
+      "techstack": "Golang, Vue.js, gRPC",
+      "start": "01/2025",
+      "end": "Now",
+      "highlights": "Developed <strong>GraphQL API</strong> system, built UI, and integrated <strong>VNPay</strong> payment via gRPC.",
+      "description": "A premier website dedicated to organizing professional billiards tournaments."
+    },
+    {
+      "name": "Redaiku",
+      "role": "BE & FE Developer",
+      "techstack": "Golang, Vue.js, Flutter",
+      "highlights": "Built <strong>REST API</strong> system and implemented <strong>async workers</strong> for real-time notifications reaching millions of users.",
+      "start": "07/2024",
+      "end": "04/2025",
+      "description": "A side job matching service specialized for the construction industry that connects workers looking for work with clients looking for laborers."
+    },
+    {
+      "name": "Tence",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, Vue.js",
+      "highlights": "Designed and built <strong>GraphQL API</strong> system with <strong>Sidekiq jobs</strong> for asynchronous data migration from legacy database to new structure with hundreds of millions of records.",
+      "start": "05/2023",
+      "end": "02/2026",
+      "description": "A high-performance data processing system designed for fire protection management."
+    },
+    {
+      "name": "Eco Crawler",
+      "role": "BE Developer",
+      "techstack": "Python, MongoDB, Scrapy, Playwright, Selenium",
+      "start": "12/2023",
+      "end": "04/2024",
+      "highlights": "Built a <strong>web crawler</strong> system to collect, process, and store data into <strong>MongoDB</strong>.",
+      "description": "Crawled trading data from domestic and foreign news sites."
+    },
+    {
+      "name": "Posiwill",
+      "role": "BE & FE Developer",
+      "techstack": "PHP Laravel, Vue.js",
+      "start": "05/2023",
+      "end": "11/2023",
+      "highlights": "Maintained and extended <strong>RESTful API</strong> system and managed SQL database.",
+      "description": "An administration page, an important part of a website system developed towards microservices."
+    },
+    {
+      "name": "All In One",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, Vue.js, Flutter",
+      "highlights": "Participated in designing and building a <strong>GraphQL API</strong> system for managing internal company projects and resources.",
+      "start": "08/2023",
+      "end": "12/2023",
+      "description": "Management website developed according to the Jira Atlassian model. Integrated third-party services: Slack API, GitHub API, and data crawling from Jira."
+    },
+    {
+      "name": "SongPhuongFood",
+      "role": "BE & FE Developer",
+      "techstack": "PHP, SQL, HTML, CSS, Soft UI Dashboard",
+      "start": "08/2023",
+      "end": "10/2023",
+      "highlights": "Built core functions, optimized <strong>SQL</strong> queries, and developed the admin dashboard and landing page.",
+      "description": "E-commerce website built using pure PHP and Soft UI Dashboard PRO."
+    },
+    {
+      "name": "UnicornCart",
+      "role": "BE Developer",
+      "techstack": "Ruby on Rails, Vue.js, Nuxt",
+      "highlights": "Contributed to building <strong>GraphQL API</strong> system and integrated payment methods with <strong>PayJP</strong> and <strong>GMO</strong>.",
+      "start": "08/2022",
+      "end": "06/2023",
+      "description": "A comprehensive order management platform with a landing page feature. Users can create multiple domains for different customers and manage product listings on each landing page. The platform also supports various shipping carriers, product restocking, and multiple payment gateways including PayJP, PayPal, and GMO."
+    }
+  ]
+}
