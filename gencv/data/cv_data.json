@@ -21,8 +21,8 @@
       "company": "Behemoth co.ltd",
       "role": "Backend & Frontend Developer",
       "techstack": null,
-      "start": "8/2022",
-      "end": "Now",
+      "start": "08/2022",
+      "end": "05/2026",
       "description": "I wear multiple hats as a developer, driving impact across both backend and frontend architectures.",
       "highlights": "<ul><li>Contributed to <strong>large-scale projects</strong> across different domains</li><li>Designed and implemented <strong>backend APIs</strong> handling millions of data records daily</li><li>Collaborated with <strong>cross-functional teams</strong> to ship features end-to-end</li></ul>"
     }
@@ -51,20 +51,20 @@
   ],
   "projects": [
     {
-      "name": "Mei-wa",
+      "name": "Wills DYC",
       "role": "BE & FE Developer",
-      "techstack": "Ruby on Rails, React",
+      "techstack": "Golang, React.js, gRPC",
       "start": "12/2025",
-      "end": "Now",
-      "highlights": "Developed <strong>REST APIs</strong> and user interface",
-      "description": "A social welfare management platform designed to support elderly and disabled individuals within the community efficiently and transparently."
+      "end": "04/2026",
+      "highlights": "Built and optimized <strong>RESTful APIs</strong> and complex <strong>transaction processing logic</strong> for a large-scale shareholder reward management platform",
+      "description": "DYC is a <strong>shareholder engagement and reward management system</strong> that supports appreciation events, gift redemption, and shareholder-related activities for enterprises"
     },
     {
       "name": "Bottos",
       "role": "BE & FE Developer",
       "techstack": "Golang, Vue.js, LINE",
       "start": "12/2025",
-      "end": "Now",
+      "end": "04/2026",
       "highlights": "Built <strong>REST APIs</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
       "description": "A LINE LIFF-powered web app that lets customers book seats, check in, and access co-working café services directly within LINE chat."
     },
@@ -74,7 +74,7 @@
       "techstack": "Ruby on Rails, React",
       "highlights": "Deployed <strong>GraphQL API</strong> system and implemented CSV data import job logic.",
       "start": "09/2025",
-      "end": "Now",
+      "end": "05/2026",
       "description": "An electronic invoicing management platform that enables businesses to create, store, and track invoices online quickly, accurately, and in compliance with regulations."
     },
     {
@@ -100,9 +100,18 @@
       "role": "BE & FE Developer",
       "techstack": "Golang, Vue.js, gRPC",
       "start": "01/2025",
-      "end": "Now",
+      "end": "05/2026",
       "highlights": "Developed <strong>GraphQL API</strong> system, built UI, and integrated <strong>VNPay</strong> payment via gRPC.",
       "description": "A premier website dedicated to organizing professional billiards tournaments."
+    },
+    {
+      "name": "Mei-wa",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, React",
+      "start": "12/2025",
+      "end": "04/2026",
+      "highlights": "Developed <strong>REST APIs</strong> and user interface",
+      "description": "A social welfare management platform designed to support elderly and disabled individuals within the community efficiently and transparently."
     },
     {
       "name": "Redaiku",
