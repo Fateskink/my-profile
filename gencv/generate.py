@@ -2,11 +2,23 @@
 """Generate a PDF CV from JSON data and HTML template."""
 
 import json
+import os
 import sys
 from pathlib import Path
 
 import click
 from jinja2 import Environment, FileSystemLoader
+
+# Fix for macOS: add Homebrew lib to DYLD_LIBRARY_PATH so cffi can find GTK libs.
+# This must happen before weasyprint (or cffi) is imported.
+_homebrew_lib = "/opt/homebrew/lib"
+if os.path.exists(_homebrew_lib) and _homebrew_lib not in os.environ.get(
+    "DYLD_LIBRARY_PATH", ""
+):
+    os.environ["DYLD_LIBRARY_PATH"] = (
+        _homebrew_lib + ":" + os.environ.get("DYLD_LIBRARY_PATH", "")
+    ).rstrip(":")
+
 from weasyprint import HTML
 
 

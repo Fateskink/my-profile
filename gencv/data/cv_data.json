@@ -55,16 +55,25 @@
       "role": "BE & FE Developer",
       "techstack": "Golang, React.js, gRPC",
       "start": "12/2025",
-      "end": "04/2026",
+      "end": "05/2026",
       "highlights": "Built and optimized <strong>RESTful APIs</strong> and complex <strong>transaction processing logic</strong> for a large-scale shareholder reward management platform",
       "description": "DYC is a <strong>shareholder engagement and reward management system</strong> that supports appreciation events, gift redemption, and shareholder-related activities for enterprises"
+    },
+    {
+      "name": "Yobimori",
+      "role": "Fullstack Developer",
+      "techstack": "AWS, Golang, React, Flutter, IoT Protocol",
+      "start": "07/2025",
+      "end": "05/2026",
+      "highlights": "Maintained and extended <strong>microservices</strong> architecture, developed APIs, mobile app, and managed deployments with <strong>AWS</strong> monitoring.",
+      "description": "A mutual aid service that protects precious lives and families from marine accidents."
     },
     {
       "name": "Bottos",
       "role": "BE & FE Developer",
       "techstack": "Golang, Vue.js, LINE",
       "start": "12/2025",
-      "end": "04/2026",
+      "end": "05/2026",
       "highlights": "Built <strong>REST APIs</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
       "description": "A LINE LIFF-powered web app that lets customers book seats, check in, and access co-working café services directly within LINE chat."
     },
@@ -85,15 +94,6 @@
       "end": "Now",
       "highlights": "Built <strong>APIs</strong> and UI, developed data management system, and implemented <strong>backfill/backtest</strong> pipelines for trading strategies.",
       "description": "Intelligent trading tool that unifies symbol mapping across brokers, streamlining trading workflow with AI-powered automation."
-    },
-    {
-      "name": "Yobimori",
-      "role": "Fullstack Developer",
-      "techstack": "AWS, Golang, React, Flutter, IoT Protocol",
-      "start": "07/2025",
-      "end": "05/2026",
-      "highlights": "Maintained and extended <strong>microservices</strong> architecture, developed APIs, mobile app, and managed deployments with <strong>AWS</strong> monitoring.",
-      "description": "A mutual aid service that protects precious lives and families from marine accidents."
     },
     {
       "name": "Vibico System",
