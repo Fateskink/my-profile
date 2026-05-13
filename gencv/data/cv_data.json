@@ -53,7 +53,7 @@
     {
       "name": "Wills DYC",
       "role": "BE & FE Developer",
-      "techstack": "Golang, React.js, gRPC",
+      "techstack": "Golang, React, gRPC",
       "start": "12/2025",
       "end": "05/2026",
       "highlights": "Built and optimized <strong>RESTful API</strong> and complex <strong>transaction processing logic</strong> for a large-scale shareholder reward management platform",
@@ -62,7 +62,7 @@
     {
       "name": "Yobimori",
       "role": "Fullstack Developer",
-      "techstack": "AWS, Golang, React, Flutter, IoT Protocol",
+      "techstack": "AWS, Lambda, Golang, GraphQL, Java, React, Flutter, IoT Protocol",
       "start": "07/2025",
       "end": "05/2026",
       "highlights": "Maintained and extended <strong>microservices</strong> architecture, developed APIs, mobile app, and managed deployments with <strong>AWS</strong> monitoring.",
@@ -71,7 +71,7 @@
     {
       "name": "Bottos",
       "role": "BE & FE Developer",
-      "techstack": "Golang, Vue.js, LINE",
+      "techstack": "Golang, Redis, Vue.js, LINE Messaging API, Railway",
       "start": "12/2025",
       "end": "05/2026",
       "highlights": "Built <strong>RESTful API</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
@@ -81,10 +81,10 @@
       "name": "LineShop",
       "role": "BE & FE Developer",
       "techstack": "Ruby on Rails, Redis, GraphQL, LINE Messaging API, Nuxt, Vue.js",
-      "start": "12/2025",
+      "start": "04/2025",
       "end": "05/2026",
       "highlights": "Developed backend and frontend features, Integrated <strong>LINE Messaging API</strong> and <strong>GraphQL</strong> services for customer communication and real-time interactions.",
-      "description": "Full e-commerce and customer communication platform built around the LINE ecosystem. Multi-tenant OEM deployment with white-label customization, AI chatbot support, and polyglot microservices architecture."
+      "description": "Full e-commerce and customer communication platform built around the <strong>LINE ecosystem</strong>. Multi-tenant OEM deployment with white-label customization, AI chatbot support, and polyglot microservices architecture."
     },
     {
       "name": "FinanceHub - Signal View",
@@ -98,7 +98,7 @@
     {
       "name": "Smart Invoice",
       "role": "BE & FE Developer",
-      "techstack": "Ruby on Rails, React",
+      "techstack": "Ruby on Rails, Redis, AWS, React",
       "highlights": "Deployed <strong>GraphQL API</strong> system and implemented CSV data import job logic.",
       "start": "09/2025",
       "end": "05/2026",
@@ -116,7 +116,7 @@
     {
       "name": "Vibico System",
       "role": "BE & FE Developer",
-      "techstack": "Golang, Vue.js, gRPC",
+      "techstack": "Golang, Redis, Vue.js, gRPC",
       "start": "01/2025",
       "end": "05/2026",
       "highlights": "Developed <strong>GraphQL API</strong> system, built UI, and integrated <strong>VNPay</strong> payment via gRPC.",
@@ -134,7 +134,7 @@
     {
       "name": "Redaiku",
       "role": "BE & FE Developer",
-      "techstack": "Golang, Vue.js, Flutter",
+      "techstack": "Golang, Redis, Asynq, Vue.js, Flutter",
       "highlights": "Built <strong>RESTful API</strong> system and implemented <strong>async workers</strong> for real-time notifications reaching millions of users.",
       "start": "07/2024",
       "end": "04/2025",
@@ -143,7 +143,7 @@
     {
       "name": "Tence",
       "role": "BE & FE Developer",
-      "techstack": "Ruby on Rails, Vue.js",
+      "techstack": "Ruby on Rails, GraphQL, Redis, Sidekiq, Vue.js",
       "highlights": "Designed and built <strong>GraphQL API</strong> system with <strong>Sidekiq jobs</strong> for asynchronous data migration from legacy database to new structure with hundreds of millions of records.",
       "start": "05/2023",
       "end": "02/2026",
@@ -188,7 +188,7 @@
     {
       "name": "UnicornCart",
       "role": "BE Developer",
-      "techstack": "Ruby on Rails, Vue.js, Nuxt",
+      "techstack": "Ruby on Rails, GraphQL, Redis, Sidekiq, Vue.js, Nuxt",
       "highlights": "Contributed to building <strong>GraphQL API</strong> system and integrated payment methods with <strong>PayJP</strong> and <strong>GMO</strong>.",
       "start": "08/2022",
       "end": "06/2023",
