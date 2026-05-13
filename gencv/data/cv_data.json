@@ -66,7 +66,7 @@
       "start": "07/2025",
       "end": "05/2026",
       "highlights": "Maintained and extended <strong>microservices</strong> architecture, developed APIs, mobile app, and managed deployments with <strong>AWS</strong> monitoring.",
-      "description": "A mutual aid service that protects precious lives and families from marine accidents."
+      "description": "A <strong>marine rescue and mutual aid platform</strong> that supports fishermen and rescue teams through <strong>real-time location tracking</strong> and emergency coordination during marine accidents. The system integrates <strong>IoT protocols</strong> for offshore data transmission and is built on a scalable <strong>AWS cloud architecture</strong> using <strong>AWS Lambda</strong>, <strong>GraphQL</strong>, <strong>Golang</strong>, and <strong>Java</strong>. It also includes <strong>Flutter mobile applications</strong> optimized for real-time communication and high availability."
     },
     {
       "name": "Bottos",
