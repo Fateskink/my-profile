@@ -56,7 +56,7 @@
       "techstack": "Golang, React.js, gRPC",
       "start": "12/2025",
       "end": "05/2026",
-      "highlights": "Built and optimized <strong>RESTful APIs</strong> and complex <strong>transaction processing logic</strong> for a large-scale shareholder reward management platform",
+      "highlights": "Built and optimized <strong>RESTful API</strong> and complex <strong>transaction processing logic</strong> for a large-scale shareholder reward management platform",
       "description": "DYC is a <strong>shareholder engagement and reward management system</strong> that supports appreciation events, gift redemption, and shareholder-related activities for enterprises"
     },
     {
@@ -74,8 +74,26 @@
       "techstack": "Golang, Vue.js, LINE",
       "start": "12/2025",
       "end": "05/2026",
-      "highlights": "Built <strong>REST APIs</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
+      "highlights": "Built <strong>RESTful API</strong> and UI, integrated <strong>Stripe</strong> payment, and implemented <strong>real-time</strong> UI update features.",
       "description": "A LINE LIFF-powered web app that lets customers book seats, check in, and access co-working café services directly within LINE chat."
+    },
+    {
+      "name": "LineShop",
+      "role": "BE & FE Developer",
+      "techstack": "Ruby on Rails, Redis, GraphQL, LINE Messaging API, Nuxt, Vue.js",
+      "start": "12/2025",
+      "end": "05/2026",
+      "highlights": "Developed backend and frontend features, Integrated <strong>LINE Messaging API</strong> and <strong>GraphQL</strong> services for customer communication and real-time interactions.",
+      "description": "Full e-commerce and customer communication platform built around the LINE ecosystem. Multi-tenant OEM deployment with white-label customization, AI chatbot support, and polyglot microservices architecture."
+    },
+    {
+      "name": "FinanceHub - Signal View",
+      "role": "BE & FE Developer",
+      "techstack": "Python, FastAPI, ClickHouse, PostgreSQL, Kubernetes, Pydantic, Celery, NumPy, Pandas, React, Next.js, Apache Airflow, Apache Spark",
+      "start": "06/2025",
+      "end": "Now",
+      "highlights": "Developed backend APIs with <strong>Python FastAPI</strong> for trading and analytics features, built frontend components using Next.js for financial dashboards, Managed large-scale historical data pipelines with Apache Airflow, Apache Spark, and ClickHouse",
+      "description": "Signal View is a web-based stock market analytics platform that combines trading strategy execution, historical backtesting, and <strong>large-scale financial data processing</strong>"
     },
     {
       "name": "Smart Invoice",
@@ -87,12 +105,12 @@
       "description": "An electronic invoicing management platform that enables businesses to create, store, and track invoices online quickly, accurately, and in compliance with regulations."
     },
     {
-      "name": "AI FinanceHub",
+      "name": "FinanceHub - Signal Router",
       "role": "BE & FE Developer",
-      "techstack": "Kubernetes, Pydantic, Celery, NumPy, Pandas, React, Next.js, Apache Airflow, Apache Spark",
+      "techstack": "Python, FastAPI, Kubernetes, Pydantic, React, Next.js, MQTT, MQL5",
       "start": "06/2025",
       "end": "Now",
-      "highlights": "Built <strong>APIs</strong> and UI, developed data management system, and implemented <strong>backfill/backtest</strong> pipelines for trading strategies.",
+      "highlights": "Built <strong>APIs</strong> and UI, developed data management system",
       "description": "Intelligent trading tool that unifies symbol mapping across brokers, streamlining trading workflow with AI-powered automation."
     },
     {
@@ -110,14 +128,14 @@
       "techstack": "Ruby on Rails, React",
       "start": "12/2025",
       "end": "04/2026",
-      "highlights": "Developed <strong>REST APIs</strong> and user interface",
+      "highlights": "Developed <strong>RESTful API</strong> and user interface",
       "description": "A social welfare management platform designed to support elderly and disabled individuals within the community efficiently and transparently."
     },
     {
       "name": "Redaiku",
       "role": "BE & FE Developer",
       "techstack": "Golang, Vue.js, Flutter",
-      "highlights": "Built <strong>REST API</strong> system and implemented <strong>async workers</strong> for real-time notifications reaching millions of users.",
+      "highlights": "Built <strong>RESTful API</strong> system and implemented <strong>async workers</strong> for real-time notifications reaching millions of users.",
       "start": "07/2024",
       "end": "04/2025",
       "description": "A side job matching service specialized for the construction industry that connects workers looking for work with clients looking for laborers."
