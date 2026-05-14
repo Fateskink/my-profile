@@ -173,7 +173,7 @@
       "techstack": "Ruby on Rails, Vue.js, Flutter",
       "highlights": "Participated in designing and building a <strong>GraphQL API</strong> system for managing internal company projects and resources.",
       "start": "08/2023",
-      "end": "12/2023",
+      "end": "12/2024",
       "description": "Management website developed according to the Jira Atlassian model. Integrated third-party services: Slack API, GitHub API, and data crawling from Jira."
     },
     {
