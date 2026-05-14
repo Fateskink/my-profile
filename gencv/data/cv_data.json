@@ -107,7 +107,7 @@
     {
       "name": "FinanceHub - Signal Router",
       "role": "BE & FE Developer",
-      "techstack": "Python, FastAPI, Kubernetes, Pydantic, React, Next.js, MQTT, MQL5",
+      "techstack": "Golang, Fiber, Redis, Kubernetes, React, Next.js, MQTT, MQL5",
       "start": "06/2025",
       "end": "Now",
       "highlights": "Built <strong>APIs</strong> and UI, developed data management system",
