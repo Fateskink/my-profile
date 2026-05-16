@@ -108,6 +108,30 @@
     page-break-inside: avoid;
   }
 
+  .entry .label {
+    font-style: italic;
+  }
+
+  .project-entry {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 6px;
+  }
+
+  .project-entry:last-child {
+    border-bottom: none;
+  }
+
+  .work-entry {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 6px;
+  }
+
+  .work-entry:last-child {
+    border-bottom: none;
+  }
+
   .entry-header {
     display: flex;
     justify-content: space-between;
@@ -246,7 +270,7 @@
   <div class="section">
     <div class="section-title">Work Experience</div>
     {% for work in work_experience %}
-    <div class="entry">
+    <div class="entry work-entry">
       <div class="entry-header">
         <span class="entry-name">{{ work.company }}</span>
         <span class="entry-dates">{{ work.start }} - {{ work.end }}</span>
@@ -279,7 +303,7 @@
   <div class="section">
     <div class="section-title">Project</div>
     {% for project in projects %}
-    <div class="entry">
+    <div class="entry project-entry">
       <div class="entry-header">
         <span class="entry-name">{{ project.name }}</span>
         <span class="entry-dates">{{ project.start }} - {{ project.end }}</span>
@@ -292,7 +316,7 @@
       <div class="entry-highlights"><span class="label">Contribute:</span> {{ project.highlights|safe }}</div>
       {% endif %}
       {% if project.description %}
-      <div class="entry-description">{{ project.description }}</div>
+      <div class="entry-description"><span class="label">Description:</span> {{ project.description }}</div>
       {% endif %}
     </div>
     {% endfor %}

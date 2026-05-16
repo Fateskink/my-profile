@@ -24,8 +24,17 @@
       "start": "08/2022",
       "end": "05/2026",
       "description": "I wear multiple hats as a developer, driving impact across both backend and frontend architectures.",
-      "highlights": "<ul><li>Contributed to <strong>large-scale projects</strong> across different domains</li><li>Designed and implemented <strong>backend APIs</strong> handling millions of data records daily</li><li>Collaborated with <strong>cross-functional teams</strong> to ship features end-to-end</li></ul>"
-    }
+      "highlights": "<ul><li>Contributed to <strong>large-scale projects</strong> across different domains</li><li>Designed and implemented <strong>backend APIs</strong> handling millions of data records daily</li><li>Collaborated with <strong>cross-functional teams</strong> to ship features end-to-end</li><li>Leveraged <strong>AI-assisted development tools</strong> such as <strong>Claude Code</strong> to accelerate software development workflows, including code generation, specification analysis, and implementation planning</li><li>Applied AI tools to <strong>optimize development processes</strong>, improve engineering productivity, and reduce feature delivery time</li></ul>"
+    },
+    {
+    "company": "Freelance & Independent Projects",
+    "role": "Backend & Frontend Developer",
+    "techstack": null,
+    "start": "06/2025",
+    "end": "Now",
+    "description": "Contributed to the development of financial analytics and intelligent trading platforms, focusing on scalable backend systems, realtime data processing, and modern frontend applications.",
+    "highlights": "<ul><li>Built experience developing <strong>scalable backend systems</strong> for <strong>realtime trading</strong> and financial data platforms</li><li>Worked with <strong>high-volume realtime data processing</strong>, improving system performance, reliability, and data synchronization</li><li>Strengthened problem-solving skills through optimization of latency-sensitive and data-intensive applications</li><li>Worked across both backend and frontend development in fast-paced product environments</li><li>Applied <strong>AI-assisted</strong> development workflows to accelerate implementation, planning, and code optimization</li></ul>"
+  }
   ],
   "skills": [
     {
@@ -87,12 +96,12 @@
       "description": "Full e-commerce and customer communication platform built around the <strong>LINE ecosystem</strong>. Multi-tenant OEM deployment with white-label customization, AI chatbot support, and polyglot microservices architecture."
     },
     {
-      "name": "FinanceHub - Signal View",
+      "name": "FinanceHub - Wise Chart Signal",
       "role": "BE & FE Developer",
       "techstack": "Python, FastAPI, ClickHouse, PostgreSQL, Kubernetes, Pydantic, Celery, NumPy, Pandas, React, Next.js, Apache Airflow, Apache Spark",
-      "start": "06/2025",
+      "start": "09/2025",
       "end": "Now",
-      "highlights": "Developed backend APIs with <strong>Python FastAPI</strong> for trading and analytics features, built frontend components using Next.js for financial dashboards, Managed large-scale historical data pipelines with Apache Airflow, Apache Spark, and ClickHouse",
+      "highlights": "Developed backend APIs with <strong>Python FastAPI</strong> for trading and analytics features, built frontend components using Next.js for financial dashboards, Managed large-scale historical <strong>data pipelines</strong> with Apache Airflow, Apache Spark, and ClickHouse",
       "description": "Signal View is a web-based stock market analytics platform that combines trading strategy execution, historical backtesting, and <strong>large-scale financial data processing</strong>"
     },
     {
@@ -110,8 +119,8 @@
       "techstack": "Golang, Fiber, Redis, Kubernetes, React, Next.js, MQTT, MQL5",
       "start": "06/2025",
       "end": "Now",
-      "highlights": "Built <strong>APIs</strong> and UI, developed data management system",
-      "description": "Intelligent trading tool that unifies symbol mapping across brokers, streamlining trading workflow with AI-powered automation."
+      "highlights": "Built <strong>APIs</strong> and frontend UI, developed <strong>realtime trading</strong> data management systems, integrated <strong>MQTT</strong> communication for low-latency signal delivery, and worked with <strong>MQL5</strong> to support synchronized multi-account trading execution across brokers",
+      "description": "Intelligent <strong>trading platform</strong> that enables users to connect trading signals, execute <strong>synchronized</strong> trades across multiple accounts and brokers, and manage realtime trading data efficiently through unified symbol mapping and automated trading workflows."
     },
     {
       "name": "Vibico System",
